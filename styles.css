@@ -100,6 +100,41 @@ body.overflow-hidden {
     overflow: hidden;
 }
 
+/*  Hide main-body when menu is open */
+.main-body.hidden {
+    display: none;
+  }
+  
+.header {
+    text-align: center;
+    background-image: url('assets/man-praying.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    color: #fff;
+    position: relative;
+    height: 300px; 
+    overflow: hidden; /* Hide any overflowed content */
+}
+
+.header .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.5em;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
@@ -134,5 +169,21 @@ body.overflow-hidden {
     
     .nav-links.open li {
         margin-bottom: 30px;
+    }
+
+    .header .header-content {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header p {
+        font-size: 1.2em;
+    }
+
+    .header {
+        margin-top: 1.5em;
     }
 }

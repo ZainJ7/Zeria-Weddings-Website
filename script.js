@@ -7,4 +7,9 @@ function toggleMenu() {
     
     // Toggle body class to prevent background scrolling when menu is open
     document.body.classList.toggle('overflow-hidden');
-}
+    
+    // Toggle the 'hidden' class on the main-body div
+    var mainBody = document.querySelector('.main-body');
+    mainBody.classList.toggle('hidden');
+  }
+  
