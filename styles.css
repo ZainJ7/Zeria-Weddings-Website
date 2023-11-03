@@ -6,6 +6,9 @@ body {
     background-color: #FFF6F6;
 }
 
+.title-navbar {
+    display: none;
+}
 /* Navigation Bar */
 #navbar {
     display: flex;
@@ -105,6 +108,12 @@ body.overflow-hidden {
     display: none;
   }
   
+  .main-body {
+    min-height: calc(100vh - 4rem); /* Subtract footer height from viewport height */
+    padding-bottom: 4rem; /* Add padding to the bottom of the content */
+    position: relative; /* Add position relative */
+}
+
 .header {
     text-align: center;
     background-image: url('assets/man-praying.jpg'); 
@@ -127,7 +136,7 @@ body.overflow-hidden {
 }
 
 .header h1 {
-    font-size: 2.5em;
+    font-size: 5em;
     margin-bottom: 10px;
 }
 
@@ -135,8 +144,69 @@ body.overflow-hidden {
     font-size: 1.5em;
 }
 
+.first-heading {
+    text-align: center;
+    color: #E3CA77;
+    position: relative;
+    font-size: 2em;
+    margin-top: 0.2em;
+}
+
+.about-p {
+    font-family: 'Cormorant', serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 auto; /* Center the entire paragraph horizontally */
+  width: 60%; /* Set a width for the text block */
+  padding: 0.5em; /* Add some padding for spacing within the block */
+  text-align: center; /* Center-align the text within the block */
+  color: #333;
+}
+
+.me-photos-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow the images to wrap to the next row on small screens */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.me-photo {
+    max-width: 300px; /* Ensure images don't exceed the width of their container */
+    max-height: 250px;
+    margin: 0.5em; /* Adjust the margin as needed */
+    flex: 1; /* Allow images to take equal horizontal space */
+}
+
+.spacer {
+    height: 1.5em; /* Adjust the height as needed */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: #3F5A36;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
 /* Responsive */
 @media (max-width: 768px) {
+
+    .title-navbar {
+    display: block;
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    }
+
     .nav-links {
         position: fixed;
         right: 0;
@@ -171,12 +241,16 @@ body.overflow-hidden {
         margin-bottom: 30px;
     }
 
+    .main-body {
+        padding-bottom: 6em; /* Add padding to the bottom of the content */
+    }
+
     .header .header-content {
         padding: 10px; /* Adjust padding for smaller screens */
     }
 
     .header h1 {
-        font-size: 2em;
+        font-size: 3em;
     }
 
     .header p {
@@ -186,4 +260,15 @@ body.overflow-hidden {
     .header {
         margin-top: 1.5em;
     }
+
+    .me-photos-container {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center;
+    }
+
+    .me-photo {
+        max-width: 90%; /* Reduce image width for smaller screens */
+    }
 }
+
+  
